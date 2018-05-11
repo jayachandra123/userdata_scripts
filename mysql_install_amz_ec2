@@ -1,0 +1,30 @@
+ To install a MySQL Server
+
+    First step is to of course ssh into the EC2 instance
+    Then, at a command prompt, use the following command to install MySQL Server:
+
+    sudo yum install mysql-server
+
+    When you are prompted, type 'y'.
+
+To start the installed MySQL Server
+
+    Start mysql, and configure it to start up automatically on reboot.
+
+    sudo chkconfig mysqld on
+
+    sudo service mysqld start
+
+    You would see a response like the following.
+
+    Starting mysqld
+
+Configuring newly installed MySQL Server
+
+    To update the password of root user do the following:
+
+    mysqladmin -u root password [your_new_pwd]
+
+    To create a database do the following:
+
+    mysqladmin -u root -p create [your_new_db]
